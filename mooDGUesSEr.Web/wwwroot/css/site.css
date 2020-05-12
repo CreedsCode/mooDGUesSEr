@@ -1,0 +1,16 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    background: radial-gradient(50% 50% at 50% 50%, #2B3760 0%, #0B1023 100%);
+}
+
+.is-custom-size{
+    font-size: 3.8rem;
+}
