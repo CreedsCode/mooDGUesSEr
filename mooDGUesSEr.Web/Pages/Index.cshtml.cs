@@ -25,13 +25,13 @@ namespace mooDGUesSEr.Web.Pages
         public IActionResult OnGetMood([FromQuery]string text)
         {
             if (String.IsNullOrEmpty(text)) return Content("Clear");
-            var input = new ModelInput { SentimentText = text };
+            var input = new ModelInput { Comment = text };
             var prediction = _enginePool.Predict(input);
 
             var result = prediction.Prediction switch
             {
-                var x when x == false => "Good",
-                var x when x == true => "Bad",
+                var x when x == true => "Good",
+                var x when x == false => "Bad",
             };
 
             return Content(result);

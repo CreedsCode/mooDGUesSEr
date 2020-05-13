@@ -11,7 +11,7 @@ namespace MooDGUesSErML.ConsoleApp
     class Program
     {
         //Dataset to use for predictions 
-        private const string DATA_FILEPATH = @"C:\Users\hoffm\Downloads\wikipedia-detox-250-line-data.tsv.txt";
+        private const string DATA_FILEPATH = @"C:\Users\hoffm\Desktop\yelp_labelled_columns.txt";
 
         static void Main(string[] args)
         {
@@ -22,7 +22,7 @@ namespace MooDGUesSErML.ConsoleApp
             var predictionResult = ConsumeModel.Predict(sampleData);
 
             Console.WriteLine("Using model to make single prediction -- Comparing actual Sentiment with predicted Sentiment from sample data...\n\n");
-            Console.WriteLine($"SentimentText: {sampleData.SentimentText}");
+            Console.WriteLine($"Comment: {sampleData.Comment}");
             Console.WriteLine($"\n\nActual Sentiment: {sampleData.Sentiment} \nPredicted Sentiment: {predictionResult.Prediction}\n\n");
             Console.WriteLine("=============== End of process, hit any key to finish ===============");
             Console.ReadKey();

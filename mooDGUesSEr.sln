@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mooDGUesSEr.Web", "mooDGUesSEr.Web\mooDGUesSEr.Web.csproj", "{5ABF41BE-BEDE-49F4-A237-8A574B888A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mooDGUesSEr.Web", "mooDGUesSEr.Web\mooDGUesSEr.Web.csproj", "{5ABF41BE-BEDE-49F4-A237-8A574B888A90}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mooDGUesSErML.Model", "mooDGUesSErML.Model\mooDGUesSErML.Model.csproj", "{A419E41E-80E0-49AF-9BC2-EC59BCAF31E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mooDGUesSErML.Model", "mooDGUesSErML.Model\mooDGUesSErML.Model.csproj", "{68EAB4AD-5FF6-46C5-94B4-4B95322EBF38}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mooDGUesSErML.ConsoleApp", "mooDGUesSErML.ConsoleApp\mooDGUesSErML.ConsoleApp.csproj", "{0FAA17E2-DE49-4CDA-BAAB-3CFDFEBB8E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mooDGUesSErML.ConsoleApp", "mooDGUesSErML.ConsoleApp\mooDGUesSErML.ConsoleApp.csproj", "{8EA943B3-0B39-4D52-BA9B-BD7643557038}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{5ABF41BE-BEDE-49F4-A237-8A574B888A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ABF41BE-BEDE-49F4-A237-8A574B888A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ABF41BE-BEDE-49F4-A237-8A574B888A90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A419E41E-80E0-49AF-9BC2-EC59BCAF31E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A419E41E-80E0-49AF-9BC2-EC59BCAF31E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A419E41E-80E0-49AF-9BC2-EC59BCAF31E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A419E41E-80E0-49AF-9BC2-EC59BCAF31E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0FAA17E2-DE49-4CDA-BAAB-3CFDFEBB8E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FAA17E2-DE49-4CDA-BAAB-3CFDFEBB8E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FAA17E2-DE49-4CDA-BAAB-3CFDFEBB8E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FAA17E2-DE49-4CDA-BAAB-3CFDFEBB8E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EAB4AD-5FF6-46C5-94B4-4B95322EBF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EAB4AD-5FF6-46C5-94B4-4B95322EBF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EAB4AD-5FF6-46C5-94B4-4B95322EBF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EAB4AD-5FF6-46C5-94B4-4B95322EBF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EA943B3-0B39-4D52-BA9B-BD7643557038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA943B3-0B39-4D52-BA9B-BD7643557038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA943B3-0B39-4D52-BA9B-BD7643557038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA943B3-0B39-4D52-BA9B-BD7643557038}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

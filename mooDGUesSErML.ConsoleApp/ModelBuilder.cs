@@ -7,12 +7,13 @@ using System.Linq;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using MooDGUesSErML.Model;
+using Microsoft.ML.Trainers;
 
 namespace MooDGUesSErML.ConsoleApp
 {
     public static class ModelBuilder
     {
-        private static string TRAIN_DATA_FILEPATH = @"C:\Users\hoffm\Downloads\wikipedia-detox-250-line-data.tsv.txt";
+        private static string TRAIN_DATA_FILEPATH = @"C:\Users\hoffm\Desktop\yelp_labelled_columns.txt";
         private static string MODEL_FILEPATH = @"C:\Users\hoffm\AppData\Local\Temp\MLVSTools\mooDGUesSErML\mooDGUesSErML.Model\MLModel.zip";
         // Create MLContext to be shared across the model creation workflow objects 
         // Set a random seed for repeatable/deterministic results across multiple trainings.
@@ -44,12 +45,12 @@ namespace MooDGUesSErML.ConsoleApp
         public static IEstimator<ITransformer> BuildTrainingPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations 
-            var dataProcessPipeline = mlContext.Transforms.Text.FeaturizeText("SentimentText_tf", "SentimentText")
-                                      .Append(mlContext.Transforms.CopyColumns("Features", "SentimentText_tf"))
+            var dataProcessPipeline = mlContext.Transforms.Text.FeaturizeText("Comment_tf", "Comment")
+                                      .Append(mlContext.Transforms.CopyColumns("Features", "Comment_tf"))
                                       .Append(mlContext.Transforms.NormalizeMinMax("Features", "Features"))
                                       .AppendCacheCheckpoint(mlContext);
             // Set the training algorithm 
-            var trainer = mlContext.BinaryClassification.Trainers.AveragedPerceptron(labelColumnName: "Sentiment", numberOfIterations: 10, featureColumnName: "Features");
+            var trainer = mlContext.BinaryClassification.Trainers.SdcaLogisticRegression(new SdcaLogisticRegressionBinaryTrainer.Options() { L2Regularization = 0.001f, L1Regularization = 0f, ConvergenceTolerance = 0.001f, MaximumNumberOfIterations = 10, Shuffle = true, BiasLearningRate = 0f, LabelColumnName = "Sentiment", FeatureColumnName = "Features" });
 
             var trainingPipeline = dataProcessPipeline.Append(trainer);
 
