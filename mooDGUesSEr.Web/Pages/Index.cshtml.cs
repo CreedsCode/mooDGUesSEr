@@ -27,12 +27,24 @@ namespace mooDGUesSEr.Web.Pages
             if (String.IsNullOrEmpty(text)) return Content("Clear");
             var input = new ModelInput { SentimentText = text };
             var prediction = _enginePool.Predict(input);
-            var result = Convert.ToBoolean(prediction.Prediction) ? "Bad" : "Good";
+
+            var result = prediction.Prediction switch
+            {
+                var x when x == false => "Good",
+                var x when x == true => "Bad",
+            };
+
             return Content(result);
         }
 
 
         public void OnGet(){}
 
+    }
+
+    enum Results
+    {
+        Bad,
+        Happy
     }
 }
